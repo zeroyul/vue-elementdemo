@@ -1,0 +1,121 @@
+[{
+    "ID":"401",
+    "code":"5",
+    "shopname":"川宁-精品锡兰红茶",
+    "supplier":"水果店",
+    "shoptype":"标品",
+    "price":"18.2",
+    "stock":"56",
+    "warningStock":"56",
+    "classify":"茶饮",
+    "state":"1"
+
+},{
+    "ID":"402",
+    "code":"6",
+    "shopname":"川宁-精品锡兰红茶",
+    "supplier":"水果店",
+    "shoptype":"标品",
+    "price":"18.2",
+    "stock":"56",
+    "warningStock":"10",
+    "classify":"茶饮",
+    "state":"0"
+
+},{
+    "ID":"403",
+    "code":"7",
+    "shopname":"川宁-精品锡兰红茶",
+    "supplier":"水果店",
+    "shoptype":"标品",
+    "price":"18.2",
+    "stock":"56",
+    "warningStock":"65",
+    "classify":"茶饮",
+    "state":"1"
+
+},{
+    "ID":"404",
+    "code":"7",
+    "shopname":"川宁-精品锡兰红茶",
+    "supplier":"水果店",
+    "shoptype":"标品",
+    "price":"18.2",
+    "stock":"56",
+    "warningStock":"12",
+    "classify":"茶饮",
+    "state":"0"
+
+},{
+    "ID":"405",
+    "code":"7",
+    "shopname":"川宁-精品锡兰红茶",
+    "supplier":"水果店",
+    "shoptype":"标品",
+    "price":"18.2",
+    "stock":"56",
+    "warningStock":"11",
+    "classify":"茶饮",
+    "state":"0"
+
+},{
+    "ID":"406",
+    "code":"7",
+    "shopname":"川宁-精品锡兰红茶",
+    "supplier":"水果店",
+    "shoptype":"标品",
+    "price":"18.2",
+    "stock":"56",
+    "warningStock":"55",
+    "classify":"茶饮",
+    "state":"0"
+
+},{
+    "ID":"407",
+    "code":"7",
+    "shopname":"川宁-精品锡兰红茶",
+    "supplier":"水果店",
+    "shoptype":"标品",
+    "price":"18.2",
+    "stock":"56",
+    "warningStock":"66",
+    "classify":"茶饮",
+    "state":"0"
+
+},{
+    "ID":"408",
+    "code":"7",
+    "shopname":"川宁-精品锡兰红茶",
+    "supplier":"水果店",
+    "shoptype":"标品",
+    "price":"18.2",
+    "stock":"56",
+    "warningStock":"44",
+    "classify":"茶饮",
+    "state":"1"
+
+},{
+    "ID":"409",
+    "code":"7",
+    "shopname":"川宁-精品锡兰红茶",
+    "supplier":"水果店",
+    "shoptype":"标品",
+    "price":"18.2",
+    "stock":"56",
+    "warningStock":"99",
+    "classify":"茶饮",
+    "state":"1"
+
+},{
+    "ID":"410",
+    "code":"7",
+    "shopname":"川宁-精品锡兰红茶",
+    "supplier":"水果店",
+    "shoptype":"标品",
+    "price":"18.2",
+    "stock":"56",
+    "warningStock":"16",
+    "classify":"茶饮",
+    "state":"0"
+
+}]
