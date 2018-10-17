@@ -24,7 +24,7 @@
     	<section>我是椿</section>
     	<div  :class="{colorgreen:isLogin}">computed</div>
     	<div>计算属性的反转 {{reverseMsg}}</div>
-    	<section>我是湫湫湫</section>
+    	<section class="test-rem">我是湫湫湫</section>
     </div>
     <div>
     	<h1>watch测试</h1>
@@ -125,12 +125,17 @@ h1, h2 {
 .test-computed{
 	span{
 		color: blue;
+		font-size: 26px;
 	}
 	.colorgreen{
 		color: green;
 	}
 	.colorred{
 		color:red;
+	}
+	.test-rem{
+		height: 100px;
+		font-size: 30px;
 	}
 }
 ul {
