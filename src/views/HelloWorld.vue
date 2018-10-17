@@ -19,7 +19,7 @@
     </ul>
     <div class="test-computed">    	
     	<span @click="clickComputed">
-    		测试计算属性computed厉害了
+    		测试计算属性computed厉害了 测试湫湫湫
     	</span>
     	<div  :class="{colorgreen:isLogin}">computed</div>
     	<div>计算属性的反转 {{reverseMsg}}</div>
