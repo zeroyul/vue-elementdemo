@@ -66,7 +66,7 @@
     <h2>电话过滤{{phone|PrivacyPhone}}</h2>
     <h2>银行卡格式化{{cardNo|bankNumber}}</h2>
     <h2>亿万元过滤器{{money|amount}}</h2>
-    
+    <h1>新建分支测试</h1>
   </div>
 </template>
 <script>
