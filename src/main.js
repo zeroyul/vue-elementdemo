@@ -12,8 +12,13 @@ import '../static/UE/ueditor.all.min.js'
 import '../static/UE/lang/zh-cn/zh-cn.js'
 import '../static/UE/ueditor.parse.min.js'
 
-import echarts from 'echarts'
+//引入mockjs
+require('./mock/mock.js')
+//filter数据
+require('./filter/filter')  
 
+import echarts from 'echarts'
+import 'lib-flexible/flexible.js'
 import 'element-ui/lib/theme-chalk/index.css'
 import '../static/font/iconfont.css'//字体图标引入
 //Vue.prototype.$echarts = echarts

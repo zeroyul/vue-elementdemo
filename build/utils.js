@@ -34,10 +34,13 @@ exports.cssLoaders = function (options) {
       remUnit: 75
     }
   }
+  const lessLoader ={
+  	loader: 'less-loader'
+  }
 
   // generate loader string to be used with extract text plugin
   function generateLoaders (loader, loaderOptions) {
-    const loaders = options.usePostCSS ? [cssLoader, postcssLoader,px2remLoader] : [cssLoader]
+    const loaders = options.usePostCSS ? [cssLoader, postcssLoader,px2remLoader,lessLoader] : [cssLoader,px2remLoader,lessLoader]
 
     if (loader) {
       loaders.push({
