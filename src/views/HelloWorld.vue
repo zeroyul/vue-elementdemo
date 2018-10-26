@@ -36,6 +36,37 @@
     	<p>{{inputchange}}</p>
     	<input v-model.lazy="msg"/>
     </div>
+    
+    <div @click.prevent="getname($event)" data-name="name1">
+    	<span>55</span>
+    	
+    </div>
+    <div @click.prevent="getname($event)" data-name="name2">
+    	<span>55</span>
+    </div>
+    <div>小提琴</div>
+    <div class="top-head">
+    	<ul>
+    		<li :class="[{active:item.show}]" @click="changeli(index,item)" v-for="(item,index) in headerData">
+    			{{item.name}}{{item.show}}
+    				<ul v-show="item.show">
+    					<li v-for="(el,index) in item.list" @click.stop="doThis(index)">{{el}}</li>
+    				</ul>
+    		</li>
+    	</ul>
+    </div>
+    
+    <div @click="getMock">mock数据测试</div>
+    <h1>filter测试</h1>
+    <ul>
+    	<li v-for="(item,index) in filterArray">
+    		{{item|guaranteeStatus}}
+    	</li>
+    </ul>
+    <h2>电话过滤{{phone|PrivacyPhone}}</h2>
+    <h2>银行卡格式化{{cardNo|bankNumber}}</h2>
+    <h2>亿万元过滤器{{money|amount}}</h2>
+    
   </div>
 </template>
 <script>
@@ -43,10 +74,32 @@ export default {
   name: 'hello', /* 这个name暂时不知道用啥用，根据官方文档说的是方便排错的 */
   data () {
     return {
+    	headerData:[{
+    		name:'标题1',
+    		list:['子一','子二','子三','子四'],
+    		show:false
+    	},{
+    		name:'标题2',
+    		list:['子一','子二','子三','子四'],
+    		show:false
+    	},{
+    		name:'标题3',
+    		list:['子一','子二','子三','子四'],
+    		show:false
+    	},{
+    		name:'标题4',
+    		list:['子一','子二','子三','子四'],
+    		show:false
+    	},],
       msg: 'Welcome to Your Vue.js App', /* 这里是数据，一定记住数据一定要放data中然后用return返回 */
     	question:'',
     	inputchange:'',
-    	answer:'I cannot give'
+    	answer:'I cannot give',
+    	filterArray:[1,3,2,0,0,2,3],
+    	phone:18046597777,
+    	cardNo:6226555555555555,
+    	money:6000000
+    	
     }
   },
   watch:{
@@ -113,7 +166,27 @@ export default {
   	},
   	change(){
   		console.log(this.inputchange)
+  	},
+  	getname(e){
+  		console.log(e,e.target.getAttribute('data-name'),"name")
+  	},
+  	changeli(ind,item){
+  		item.show =!item.show;
+  		console.log(item.name);
+  		console.log(ind,"index")
+  	},
+  	doThis(index){
+  		console.log(index,'index2');
+  	},
+  	getMock(){
+  		this.$ajax.get('/personList').then(function(res){
+          console.log(res)
+        }).catch(function(err){
+          console.log(err)
+        })
+
   	}
+  	
   }
 }
 </script>
@@ -148,5 +221,39 @@ li {
 }
 a {
   color: #42b983;
+}
+.top-head{
+	
+	width: 300px;
+	background-color: #ff5722;
+	color: #ffffff;
+	>ul {
+	    width: 100%;
+	    
+	    >li {
+	        width: 100%;
+	        border: 1px solid #ffffff;
+	        cursor: pointer; 
+	        color: 20px;
+	        text-align: center;
+	        line-height: 60px;
+	        &:hover {
+	            background-color: #ff9800;
+	        }
+	        >ul {
+	            width: 100%;
+	            background: red;
+	            li{
+	                &:hover{
+	                    background: #c31111;
+	                }
+	            }
+	        }
+	    }
+	    .active {
+	        background-color: #ff9800;
+	    }
+	}
+    
 }
 </style>
