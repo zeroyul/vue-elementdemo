@@ -66,16 +66,14 @@
     <h2>电话过滤{{phone|PrivacyPhone}}</h2>
     <h2>银行卡格式化{{cardNo|bankNumber}}</h2>
     <h2>亿万元过滤器{{money|amount}}</h2>
-<<<<<<< HEAD
-    <section class="testnew"></section>
-=======
+
     <h1>新建分支测试</h1>
     <h2>回滚2</h2>
     <div>假如改了几个版本了，然后要撤回到某一个版本</div>
     <section class="testNew">
     	测试的新区块
     </section>
->>>>>>> test
+
   </div>
   
 </template>
@@ -221,17 +219,12 @@ h1, h2 {
 		font-size: 30px;
 	}
 }
-<<<<<<< HEAD
-.testnew{
-	background: orange;
-	width: 500px;
-	height: 200px;
-=======
+
 .testNew{
 	height: 100px;
 	width: 200px;
 	background: deepskyblue;
->>>>>>> test
+
 }
 ul {
   list-style-type: none;
