@@ -69,7 +69,11 @@
     <h1>新建分支测试</h1>
     <h2>回滚2</h2>
     <div>假如改了几个版本了，然后要撤回到某一个版本</div>
+    <section class="testNew">
+    	测试的新区块
+    </section>
   </div>
+  
 </template>
 <script>
 export default {
@@ -212,6 +216,11 @@ h1, h2 {
 		height: 100px;
 		font-size: 30px;
 	}
+}
+.testNew{
+	height: 100px;
+	width: 200px;
+	background: deepskyblue;
 }
 ul {
   list-style-type: none;
