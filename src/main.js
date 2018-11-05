@@ -6,11 +6,15 @@ import router from './router'
 import axios from 'axios'
 import api from './api/api.js'
 import ElementUI from 'element-ui'
+import VueLazyload from 'vue-lazyload'
+import Meta from 'vue-meta'
+
 
 import '../static/UE/ueditor.config.js'
 import '../static/UE/ueditor.all.min.js'
 import '../static/UE/lang/zh-cn/zh-cn.js'
 import '../static/UE/ueditor.parse.min.js'
+
 
 //引入mockjs
 require('./mock/mock.js')
@@ -20,6 +24,7 @@ require('./filter/filter')
 import echarts from 'echarts'
 import 'lib-flexible/flexible.js'
 import 'element-ui/lib/theme-chalk/index.css'
+import 'swiper/dist/css/swiper.min.css'
 import '../static/font/iconfont.css'//字体图标引入
 //Vue.prototype.$echarts = echarts
 
@@ -28,6 +33,13 @@ Vue.prototype.$http = api
 Vue.prototype.$ajax = axios
 
 Vue.use(ElementUI)
+Vue.use(VueLazyload,{
+	preLoad:1.3,
+	error:require('./assets/error.png'),
+	loading:require('./assets/loading@2x.png'),
+	attempt:1
+})
+Vue.use(Meta)
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

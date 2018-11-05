@@ -44,8 +44,8 @@
     <div @click.prevent="getname($event)" data-name="name2">
     	<span>55</span>
     </div>
-    <div>小提琴</div>
-    <div class="top-head">
+    <div>小提琴(加行内样式的书写)</div>
+    <div class="top-head" :style="{display: 'none'}">
     	<ul>
     		<li :class="[{active:item.show}]" @click="changeli(index,item)" v-for="(item,index) in headerData">
     			{{item.name}}{{item.show}}
@@ -74,14 +74,42 @@
     	测试的新区块
 
     </section>
+    <img src="../assets/logo.png"/>
+    <h2>懒加载插件加载测试</h2>
+    <ul class="lazy-load">
+    	<li v-for="img in imgList">
+    		<img v-lazy="img" />
+    	</li>
+    </ul>
+    <div class="swiper-container">
+	    <div class="swiper-wrapper">
+	      <div class="swiper-slide">
+	        <img src="../assets/logo.png" alt="">
+	      </div>
+	      <div class="swiper-slide">
+	        <img src="../assets/error.png" alt="">
+	      </div>
+	      <div class="swiper-slide">
+	        <img src="../assets/logo.png" alt="">
+	      </div>
+	    </div>
+	  </div>
+
   </div>
   
 </template>
 <script>
+import Swiper from 'swiper'
 export default {
   name: 'hello', /* 这个name暂时不知道用啥用，根据官方文档说的是方便排错的 */
   data () {
     return {
+      imgList:[
+      "https://avatar.csdn.net/1/E/8/3_zeroyulong.jpg",
+      "https://img-blog.csdn.net/2018052918055982700",
+      "https://img-blog.csdn.net/2018052918055982700",
+      "https://img-blog.csdn.net/2018052918055982700",
+      "https://img-blog.csdn.net/20180529180559827"],
     	headerData:[{
     		name:'标题1',
     		list:['子一','子二','子三','子四'],
@@ -144,10 +172,12 @@ export default {
 //	console.log("beforeMount")
 //	console.log(this.msg)
 //},
-//mounted:function(){
-//	console.log("mounted")
-//	console.log(this.msg)
-//},
+mounted:function(){
+	var mySwiper = new Swiper('.swiper-container', {
+          autoplay:true,
+          loop:true
+  })
+},
 //beforeUpdate:function(){
 //	console.log("beforeUpdate")
 //	console.log(this.msg)
@@ -234,6 +264,9 @@ li {
 }
 a {
   color: #42b983;
+}
+.lazy-load li{
+	display: block;
 }
 .top-head{
 	

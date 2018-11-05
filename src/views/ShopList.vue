@@ -109,6 +109,11 @@
 <script type="text/javascript">
     import headTop from '../components/headTop/headTop.vue'
     export default {
+    	name:"ShopList",
+    	metaInfo:{
+    		title:'第二个',
+    		titleTemplate:'%s | 5454'
+    	},
         data(){
             return {
 

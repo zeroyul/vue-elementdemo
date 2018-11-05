@@ -68,6 +68,11 @@
 <script type="text/javascript">
     import headTop from '../components/headTop/headTop.vue'
     export default {
+    	name:'ShopClassify',
+    	metaInfo:{
+    		title:'第一个',
+    		titleTemplate:null
+    	},
         data(){
           return {
             classifyone:[

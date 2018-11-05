@@ -52,7 +52,9 @@
     //defaultActive 是激活菜单变色  replace是字符串操作方法
     //设置权限问题的话 根据不同id 获得数组里是否禁用  即可disabled
     export default {
-
+		metaInfo:{
+    		title:'Manage'
+    	},
 
         computed: {
             defaultActive: function(){
