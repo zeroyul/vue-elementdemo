@@ -27,6 +27,8 @@
                     <el-submenu index="5">
                         <template slot="title"><i class="el-icon-star-on"></i>测试功能</template>
                         <el-menu-item index="HelloWorld">测试首页</el-menu-item>
+                        <el-menu-item index="PdfTest">pdf测试(tab切换测试)</el-menu-item>
+                        
                         <el-menu-item index="Eui">elementUi</el-menu-item>
                         <el-menu-item index="FormTest">表单测试</el-menu-item>
                         <el-menu-item index="Table">table测试</el-menu-item>

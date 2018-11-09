@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import NotFound from '@/views/404'
 import HelloWorld from '@/views/HelloWorld'
+import PdfTest from '@/views/PdfTest'
 import Eui from '@/views/Eui'
 import FormTest from '@/views/FormTest'
 import Table from '@/views/Table'
@@ -81,6 +82,11 @@ const router = new Router({
         name: 'HelloWorld',
         component: HelloWorld,
         meta:['测试功能','测试首页']
+      },{
+      	path: '/pdftest',
+      	name:'PdfTest',
+      	component:PdfTest,
+      	meta:['测试功能','pdf测试']
       },
       {
         path: '/eui',
