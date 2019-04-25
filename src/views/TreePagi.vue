@@ -24,13 +24,59 @@
    <el-button plain @click="open">不会自动关闭</el-button>
    <div class="newlesstest">
    <p>less测试一下</p>
+   
+   </div>
+   <!--插槽套组件-->
+   <div class="name-title">插槽套组件</div>
+   <AlertBox><AlertBox/>come on !slot插槽功能</AlertBox>
+   <!--插槽-->
+   <div class="name-title">插槽</div>
+   <AlertBox>come on !slot插槽功能</AlertBox>
+   <div class="move-block">
+   	<h2>动态组件</h2>
+   		<button
+   			v-for="tab in tabs"
+   			:key="tab.name"
+   			:class="['tab-button',{active:currentTab.name === tab.name}]"
+   			@click="currentTab = tab"
+   			>{{tab.name}}</button>
+   		<component
+   			:is="currentTab.component"
+   			:callbackdata="callbackdata"
+   			class="tab"
+   			
+   			>	
+   			</component>
    </div>
 </div>
 </template>
 <script>
+	import AlertBox from '@/components/alertBox/alertBox.vue'
+	import testMove from '@/components/inputComponent/index.vue'
+	var tabs = [
+	  {
+	    name: 'Home', 
+	    component: testMove
+	  },
+	  {
+	    name: 'Posts',
+	    component: {
+	      template: '<div>Posts component</div>'
+	    }
+	  },
+	  {
+	    name: 'Archive',
+	    component: {
+	      template: '<div>Archive component</div>',
+	    }
+	  }
+	]
   export default {
     data() {
       return {
+      	callbackdata:{
+      		name:"动态组件gogogo"
+      	},
         msg: '树形结构and分页',
         data: [{
           label: '一级 1',
@@ -105,9 +151,14 @@
             id: 8,
             label: '二级 3-2'
           }]
-        }]
+        }],
+      	tabs:tabs,
+				currentTab: tabs[0]
       };
     },
+    components: {
+	    AlertBox
+	  },
     methods: {
       open(){
         this.$notify({
@@ -215,5 +266,32 @@
    p{
    color:#fff;
    }
+}
+.name-title{
+	color: green;
+	font-size: 24px;
+}
+.move-block{
+	color: orangered;
+}
+.tab-button {
+  padding: 6px 10px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  background: #f0f0f0;
+  margin-bottom: -1px;
+  margin-right: -1px;
+}
+.tab-button:hover {
+  background: #e0e0e0;
+}
+.tab-button.active {
+  background: #e0e0e0;
+}
+.tab {
+  border: 1px solid #ccc;
+  padding: 10px;
 }
 </style>

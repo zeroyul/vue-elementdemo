@@ -30,8 +30,8 @@ export default {
       get(){
         this.$ajax({
           method:'get',
-          url:'https://t.api.air-cooking.com/Api/CookBook/cookBookList',
-          data:{}
+          url:'../../static/json/httpdemo.json',
+          data:{token:'1'}
         }).then(function(res){
           console.log(res)
 
